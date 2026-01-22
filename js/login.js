@@ -6,7 +6,11 @@ btnLogar.addEventListener("click", (e) => {
     const email = document.querySelector("#emailLogin").value;
     const senha = document.querySelector("#senhaLogin").value;
 
-
+    if (email == "" || senha == "") {
+        alert("Preencha todos os campos!");
+        return;
+    }
+    
     const textoDosUsuarios = localStorage.getItem("usuarios");
 
     let listaUsuarios;
